@@ -1,0 +1,15 @@
+{
+	"name": "dataFactoryMiftissen",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "francecentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a4847719-98c5-483b-bb98-ce3055a81dd7",
+		"tenantId": "a58d8f7f-8e67-4a55-aea2-bbe7f5a43294"
+	}
+}
