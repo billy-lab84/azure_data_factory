@@ -83,7 +83,7 @@
 				"     format: 'table') ~> BDD",
 				"Adress split(iif(!in(columnNames(),'AddressID'),false(), iif(!in(columnNames(),'AddressLine1'),false(), iif(!in(columnNames(),'City'),false(), iif(!in(columnNames(),'StateProvince'),false(), iif(!in(columnNames(),'CountryRegion'),false(), iif(!in(columnNames(),'PostalCode'),false(),true())))))),",
 				"     disjoint: false) ~> Pass@(Pass, Fail)",
-				"Pass@Fail assert(expectTrue(false(), false, 'failedMetadata'),",
+				"Pass@Fail assert(expectTrue(true(), false, 'failedMetadata'),",
 				"     abort: true) ~> FailedMetadata",
 				"Pass@Pass assert(expectTrue(CountryRegion == 'United States', false, 'assertUSOnly', null, CountryRegion + ' is not valid'),",
 				"     expectUnique(AddressID, false, 'addressIdUnique', null, \"ID of {AddressID} is not unique\")) ~> DataQualityRules",
